@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    {% load static %}
+    <link href="{% static 'users/style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="box-form">
+    <div class="left">
+        <div class="overlay">
+            <h1>Welcome.</h1>
+            <p>Welcome to my site</p>
+        </div>
+    </div>
+
+    <div class="right">
+        <h5>Login</h5>
+        <form method="post" action="{% url 'users:login' %}">
+			{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div class="small text-center">
+        <a href="{% url "users:password_reset" %}" class="text-center"><i>Forgot Password?</i></a>
+    </div>
+</div>
+</body>
+</html>

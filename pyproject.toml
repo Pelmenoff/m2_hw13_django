@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "m2-hw10"
+version = "0.1.0"
+description = ""
+authors = ["Pelmenoff <Titanfall@ukr.net>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^4.2.7"
+psycopg2 = "^2.9.9"
+peewee = "^3.17.0"
+scrapy = "^2.11.0"
+pymongo = "^4.6.0"
+django-environ = "^0.11.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

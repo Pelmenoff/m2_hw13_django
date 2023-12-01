@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+{% load static %}
+    <link href="{% static 'users/style.css' %}" rel="stylesheet">
+</head>
+<body>
+<div class="box-form">
+    <div class="left">
+        <div class="overlay">
+            <h1>Welcome.</h1>
+            <p>Welcome to my site</p>
+        </div>
+    </div>
+
+    <div class="right">
+            <h5>Register</h5>
+            <form method="post" action="{% url 'users:signup' %}">
+            {% csrf_token %}
+            <br><br>
+            <div class="remember-me--forget-password"></div>
+            <br>
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
